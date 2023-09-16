@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	background: black;
+}
+.main {
+	width: 700px;
+	height: 500px;
+	padding: 0 20px;
+}
+.banner{
+	width: 700px;
+	height: 100;
+}
+.main font {
+	font-weight: normal;
+	color: white;
+}
+.main .red-text {
+	color: red;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.main .fotter {
+	font-weight: normal;
+	position: absolute;
+	bottom: 20px;
+	color: gray;
+}
+.main .red-fotter{
+	font-weight: normal;
+	color: red;
+	text-decoration: underline;
+}
