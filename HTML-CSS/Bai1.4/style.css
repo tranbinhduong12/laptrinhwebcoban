@@ -9,33 +9,136 @@ body{
 }
 
 .main {
-    width: 1200px;
-    height: 1200px;
+    width: 1100px;
+    height: 900px;
     margin: auto;
     margin-top: 50px;
 
 }
 
 .news {
-    width: 75%;
+    width: 700px;
     height: 100%;
-    padding: 10px;
+    padding: 10px 20px 20px 20px;
     box-sizing: border-box;
     background-color: white;
+    border-radius: 5px;
 }
+/* title-news  */
 .title-news{
-    border-bottom: 2px solid gray;
+    border-bottom: 4px solid #dbd5d5;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.title-news h1 {
+    line-height: 40px;
 }
 .title-news a {
     text-decoration: none;
     color: red;
     margin-right: 5px;
+    line-height: 40px;
 }
 .title-news p {
 color: gray;
 }
+
+/* title-content */
+
+.content-news {
+}
+
+.content-news h2 {
+    font-size: 20px;
+    line-height: 30px;
+    padding:10px 10px 0px 0px;
+}
+
+.content-news div {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center;     /* Căn giữa theo chiều dọc */
+    height: 400px; 
+}
+.content-news iframe {
+    width: 80%;              /* Đặt chiều rộng cho iframe */
+    height: 80%;
+}
+
+.content-news p {
+    margin: 10px 10px 10px 0px;
+    color: #313131;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: -10px;
+}
+
+
+/* menu */
 .menu {
-    width: 25%;
+    width: 400px;
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: white;
+    position: relative;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* .title-menu {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+} */
+
+.title-menu h2 {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    background-color: #a3161d;
+    text-align: center;
+    color: white;
+    /* margin-top: 10px; */
+    padding: 10px;
+}
+
+.related-news {
+    width: 100%;;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.related-news-child {
+    width: 100%;
+    height: 100px;
+}
+.related-news p {
+    text-decoration: none;
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+    line-height: 1;
+
+}
+.related-news a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    line-height: 1.5;
+    /* margin-left: 10px; */
+}
+
+div .time {
+    color: gray;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-left: 10px;
 }
