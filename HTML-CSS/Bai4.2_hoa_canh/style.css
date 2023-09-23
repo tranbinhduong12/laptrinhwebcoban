@@ -5,31 +5,30 @@
 }
 
 .main {
-    width: 100%;
-    height: 900px;
-    background-color: black;
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
 }
 
 /* css tren  */
 #tren {
     width: 100%;
     height: 120px;
-    /* background-color: aqua; */
     border-bottom: 8px solid green;
 }
 
 /* css tren trai  */
 #tren .trai {
     width: 50%;
-    height: 100%;
-    /* background-color: red; */
+    height: 120px;
     position: relative;
     float: left;
 }
 
 #tren .trai img{
     width: 80%;
-    height: auto;
+    /* height: auto; */
     bottom: -40px;
     left: -5px;
     position: absolute;
@@ -39,22 +38,21 @@
 /* css div tren phai  */
 #tren .phai {
     width: 50%;
-    height: 100%;
+    height: 120px;
     float: left;
-    /* position: relative; */
 }
 
 #tren .phai .tren{
     width: 100%;
     height: 50%;
-    /* background-color: green; */
     position: relative;
 }
 #tren .phai .tren select,
 #tren .phai .tren button {
     position: absolute;
-    margin: 5px 10px;
-    right: 0;
+    margin: 10px 20px;
+    right: 10px;
+    border: 1px solid black;
 }
 #tren .phai .tren select {
     margin-right: 40px;
@@ -64,9 +62,9 @@
 #tren .phai .duoi {
     width: 100%;
     height: 50%;
-    background-color: white;
     position: relative;
     bottom: 0;
+    right: 20px;
 }
 
 .menu {
@@ -87,13 +85,13 @@
 /* css div duoi  */
 #duoi {
     width: 100%;
-    height: 780px;
-    background-color: yellow;
+    /* height: 600px; */
+    height: 100%;
 }
 
 /* css div duoi-trai  */
 #duoi .trai {
-    width: 25%;
+    width: 20%;
     height: 100%;
     background-color: #81d381;
     border-right: 5px solid green;
@@ -114,8 +112,9 @@
 
 #duoi .trai .hoavang {
     position: absolute;
-    bottom: 50px;
-    right: -50px;
+    width: 280px;
+    bottom: 30px;
+    right: -80px;
     z-index: 1;
 }
 
@@ -128,36 +127,79 @@
 
 /* css duoi-giua */
 #duoi .giua {
-    width: 50%;
+    width: 60%;
     height: 100%;
     float: left;
-    background-color: aqua;
     position: relative;
     box-sizing: border-box;
 }
 
-/* css duoi-phai */
+/* css duoi-phai 600  */
 #duoi .phai {
-    width: 25%;
+    width: 20%;
     height: 100%;
-    background-color: gray;
-    /* border-left: 6px dotted green; */
     position: relative;
     float: right;
     right: 0px;
     box-sizing: border-box;
 } 
-#duoi .phai .tren {
 
+/* #duoi .phai .tren  */
+#duoi .phai .tren {
+    width: 100%;
+    height: 160px;
+    position: relative;
 }
 
-/* #duoi .phai .tren input {
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 20px;
-    text-align: center;
-} */
+#duoi .phai .tren div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #81d381;
 
-#duoi .input td {
-    text-align: center;
+}
+#duoi .phai .tren input{
+    width: 100px;
+}
+
+/* #duoi .phai .duoi 600 160 */
+#duoi .phai .duoi {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 6px dotted green;
+
+} 
+#duoi .phai .duoi img {
+    position: relative;
+    height: 95%;
+    width: 50%;
+    /* left: -10px; */
+}
+
+/* #duoi .giua  */
+#duoi .giua {
+    box-sizing: border-box;
+    padding: 5px 20px 0px 100px;
+    position: relative;
+}
+
+#duoi .giua div img {
+position: absolute;
+right: 50px;
+top: 50px;
+}
+
+#duoi .giua h2 {
+    padding:5px 0px 60px;
+    font-size: 30px;
+}
+
+#duoi .giua p {
+    font-size: 13px;
+    line-height: 16px;
 }
