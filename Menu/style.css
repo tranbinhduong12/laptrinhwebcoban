@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    margin: auto;
+    margin: 50px
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+tr{
+    border: 1px solid black;
+}
+th {
+    
+    height: 50px;
+    color: yellow;
+    background-image: url(/Menu/img/bar_bkg_select_cat.gif);
+    background-size: cover;
+}
+
+td {
+    background-image: url(/Menu/img/bar_bkg_main_cat.gif);
+    height: 30px;
+    background-size: cover;
+}
+
+td:hover {
+    height: 50px;
+    background-image: url(/Menu/img/bar_bkg_main_cat_hover.gif);
+}
+td:hover a{
+    font-size: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+
+}
+

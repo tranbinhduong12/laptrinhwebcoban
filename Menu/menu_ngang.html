@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Ngang</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        ul li {
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            border: 1px solid black;
+            position: relative;
+            float: left;
+        }
+        ul li ul{
+            top:50px;
+            left: -41px;
+            position: absolute;
+            display: none;
+        } 
+        ul li:hover ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <a href="">Văn học</a>
+                <ul>
+                    <li>
+                        <a href="">Hiện đại</a>
+                    </li>
+                    <li>
+                        <a href="">Cổ đại</a>
+                    </li>
+                </ul>
+            </li>
+            <li> <a href="">Toán học</a> </li>
+            <li> <a href="">Khoa học</a></li>
+            <li> <a href="">Sinh học</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>
