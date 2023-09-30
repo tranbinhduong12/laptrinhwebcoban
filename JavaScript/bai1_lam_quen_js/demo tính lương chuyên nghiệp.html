@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+Nhập lương của bạn
+<input type="number" id="input_luong">
+<button onclick="tinh()">Tinh</button>
+<div>
+	<h1>Kết quả tính đc</h1>
+	<p>
+		Lương đã nhập: <span id="span_luong"></span>
+		<br>
+		Thuế: <span id="span_thue"></span>
+		<br>
+		Lương ròng: <span id="span_luong_rong"></span>
+	</p>
+</div>
+<script type="text/javascript">
+function tinh(){
+	var luong = document.getElementById('input_luong').value;
+	var thue, luong_rong, phan_tram_thue;
+	if(luong>= 15){
+		phan_tram_thue = 0.3;
+	}
+	else if(luong > 7){
+		phan_tram_thue = 0.2;
+	}
+	else if(luong > 0){
+		phan_tram_thue = 0.1;
+	}
+	else{
+		alert('Nhap sai roi');
+		document.getElementById('input_luong').value = '';
+		document.getElementById('input_luong').focus();
+		document.getElementById('input_luong').style.border = '1px solid red';
+		return false;
+	}
+
+	thue = luong * phan_tram_thue;
+	document.getElementById('span_thue').innerHTML = thue;
+
+	luong_rong = luong - thue;
+	document.getElementById('span_luong_rong').innerHTML =  luong_rong;
+
+	document.getElementById('span_luong').innerHTML =  luong;
+}
+</script>
+</body>
+</html>

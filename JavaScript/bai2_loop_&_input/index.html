@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 loop & input</title>
+</head>
+
+<body>
+
+    1. In số chẵn lẻ từ 1-100 theo 3 vòng lặp: for, do while và while <br>
+    2. Nhập số chẵn: <br>
+    - return true nếu đúng <br>
+    - báo sai và return false nếu sai <br> <br>
+
+    <form action="">
+        Nhập số chẵn:
+        <input type="number" id="input_so">
+        <br>
+        
+        <button type="button" onclick="in_ra()"> kiểm tra</button>
+
+    </form>
+    <div id="ket_qua"></div> 
+
+    <script>
+        function in_ra(so) {
+            let so = document.getElementById('input_so').value;
+            if(so%2 == 0) {
+            document.getElementById('ket_qua').innerHTML = so + ' la so chan';
+            } else if(so%2 == 1) {
+            document.getElementById('ket_qua').innerHTML = so + ' la so le';
+            } else {
+            document.getElementById('ket_qua').innerHTML = so + ' la so thap phan';
+            document.getElementById('ket_qua').style.color='red';
+            }
+        }
+    </script>
+
+    <!-- <script>
+        //in so chan le for
+        // let i = 0;
+        for(let i =0; i<= 100; i++) {
+            if (i %2 == 0) {
+                document.write(`Đây là số chẵn: ${i} for<br> `);
+            } else {
+                document.write(`Đây là số lẻ ${i} for<br>`);
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        // in so chan le while 
+        let i = 0;
+        while (i<=100) {
+            if(i%2 == 0) {
+                document.write(`Đây là số chẵn: ${i} while <br>`);
+            } else {
+                document.write(`Đây là số lẻ: ${i} while <br>`);
+            }
+            i++;
+        }
+    </script> -->
+
+    <!-- <script>
+        // in so chan le do while 
+        let i = 0;
+        do {
+            if(i%2 == 0) {
+                document.write(`Dday là số chẵn ${i} do while <br>`);
+            } else {
+                document.write(`Đây là số lẻ ${i} do while <br>`);
+            }
+            i++;
+        } while (i <=100)
+    </script> -->
+
+
+
+</body>
+
+</html>

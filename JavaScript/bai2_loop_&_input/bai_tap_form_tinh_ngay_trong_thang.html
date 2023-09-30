@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* border: none; */
+        }
+        form {
+            margin: 20px 10px;
+        }
+        .title {
+            text-align: center;
+        }
+        tr:last-child {
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+    <title>Tính ngày trong tháng</title>
+</head>
+
+<body>
+    <form action="#">
+        <table style="border: 1px solid black;">
+            <tr class="title"> 
+                <th>TÍNH NGÀY TRONG THÁNG</th> 
+            </tr>
+            <tr>
+                <td>Tháng/năm:</td>
+                <td>
+                    <input type="number" id="thang"> /
+                </td>
+                <td><input type="number" id="nam"></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="in_ra()">Tính số ngày</button></td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- <input type="text" id="ket_qua"> -->
+                    <textarea id="ket_qua"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let ngay;
+
+        function in_ra() {
+        let thang = parseInt(document.getElementById('thang').value);
+        let nam = parseInt(document.getElementById('nam').value);
+        // let ket_qua = document.getElementById('ket_qua').innerHTML;
+        // let ngay;
+        switch(thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                // document.getElementById('ket_qua').innerHTML = 'huhu';
+                ngay = 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                ngay = 30;
+                break;
+            case 2:
+                if( nam % 400 == 0 || (nam % 4 == 0 && nam % 100!=0)){
+                    ngay = 29;
+                } else {
+                    ngay =28;
+                }
+                break;
+            default:
+                document.getElementById('ket_qua').innerHTML = 'tháng không hợp lệ';
+                
+        }
+        document.getElementById('ket_qua').innerHTML = `Tháng ${thang} năm ${nam} có ${ngay} ngày`;
+
+        }
+    </script>
+
+</body>
+
+</html>

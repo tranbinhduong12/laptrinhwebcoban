@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 làm quen Js</title>
+</head>
+
+<body>
+
+    Giả sử bạn là kế toán cho một công ty. <br>
+    Bạn cần viết một chương trình để nhập lương nhân viên,
+    tính thuế thu nhập và lương ròng
+    (số tiền lương thực sự mà nhân viên đó nhận được). <br>
+    Với các thông số sau (mình chỉ đưa ra các con số này cho dễ tính toán): <br>
+    30% thuế thu nhập nếu lương là 15 triệu <br>
+    20% thuế thu nhập nếu lương từ 7 đến 15 triệu <br>
+    10% thuế thu nhập nếu lương dưới 7 triệu <br>
+    <br>
+    <br>
+    <script>
+        let luong = 5;
+
+        if (luong > 15) {
+            document.write('Thuế thu nhập là 30% va lương ròng là: ' + luong * 0.7 + ' triệu');
+        } else if(luong >= 7 && luong <=15) {
+            document.write('Thuế thu nhập là 20% va lương ròng là: ' + luong * 0.8 +' triệu');
+        } else if(luong >= 0 && luong < 7) {
+            document.write('Thuế thu nhập là 30% va lương ròng là: ' + luong * 0.9 +' triệu');
+        }
+
+    </script>
+
+</body>
+
+</html>
