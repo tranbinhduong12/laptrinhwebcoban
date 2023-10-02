@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập mảng</title>
+</head>
+
+<body>
+    Tạo 1 input. Yêu cầu: <br>
+    - Lấy giá trị input về cho vào mảng <br>
+    - In ra toàn bộ số chẵn, số lẻ <br>
+    - Tính tổng phần tử trong mảng <br>
+    *Tìm số lớn nhất trong mảng <br>
+    **In ra các số nguyên tố <br>
+    ***In số với màu ứng với mã màu trong css <br>
+    ****Ấn phím enter để nhập thay vì ấn nút <br>
+    <form action="">
+        Nhập số
+        <input type="text" id="input_so">
+        <br>
+        <button type="button" onclick="nhap()"> Nhập</button>
+        <button type="button" onclick="in_ra()"> In mảng</button>
+        <button type="button" onclick="in_so_chan_le()">in so chan le</button>
+        <button type="button" onclick="tinh_tong()">tinh tong mang</button>
+        <button type="button" onclick="tim_max()">tim max</button>
+        <button type="button" onclick="kiem_tra_so_nguyen_to()">so nguyen to</button>
+    </form>
+    <div id="ket_qua"></div>
+
+
+    <!-- lay trai tri input ve mang  -->
+    <!-- <script>
+        let mang = [];
+        function nhap() {
+            let so = parseInt(document.getElementById('input_so').value);
+            mang.push(so);
+            document.getElementById('input_so').value = '';
+        }
+
+        function in_ra() {
+            let chuoi = '';
+            for(let i =0; i < mang.length; i++) {
+                chuoi += mang[i] + '<br>';
+            }
+            document.getElementById('ket_qua').innerHTML = chuoi ;
+        }
+    </script> -->
+
+
+    <!-- in so chan le -->
+    <!-- <script>
+        let mang = [];
+        function nhap() {
+        let so = parseInt(document.getElementById('input_so').value);
+        mang.push(so);
+        document.getElementById('input_so').value = ''
+        }
+
+        function in_so_chan_le() {
+            let chuoi = ''
+            for(let i = 0; i < mang.length; i++) {
+                if(mang[i]%2 == 0) {
+                    chuoi += mang[i] + 'la so chan <br>';
+                } else {
+                    chuoi += mang[i] + 'la so le <br>'
+                }
+            }
+            document.getElementById('ket_qua').innerHTML = chuoi;
+        }
+    </script> -->
+
+    <!-- tinh tong phan tu trong mang  -->
+    <!-- <script>
+        let mang = [];
+        function nhap() {
+            let so = parseInt(document.getElementById('input_so').value);
+            mang.push(so);
+            document.getElementById('input_so').value = '';
+        }
+
+        let tong = 0;
+        function tinh_tong() {
+            for(let i =0; i < mang.length; i ++) {
+                tong += mang[i];
+            }
+            document.getElementById('ket_qua').innerHTML = mang + ' tong mang la: ' + tong;
+        }
+    </script> -->
+
+    <!-- tim so lon nhat trong mang  -->
+    <!-- <script>
+        let mang = [];
+        function nhap(){
+            let so = parseInt(document.getElementById('input_so').value);
+            mang.push(so);
+            document.getElementById('input_so').value = '';
+        }
+
+        function tim_max() {
+            let max = '';
+            for(let i = 0; i < mang.length; i++) {
+                if(mang[i] > max) {
+                    max = mang[i];
+                }
+            }
+            document.getElementById('ket_qua').innerHTML = mang + ' so lon nhat la: ' +max;
+        }
+    </script> -->
+
+    <!-- in ra cac so nguyen to  -->
+    <script>
+        let mang = [];
+        function nhap() {
+            let so = parseInt(document.getElementById('input_so').value);
+            mang.push(so);
+            document.getElementById('input_so').value = '';
+        }
+
+        function kiem_tra_so_nguyen_to() {
+            let mang_so_nguyen_to = [];
+
+            for (let i = 0; i < mang.length; i++) {
+                let dem = 0;
+                for (let j = 1; j <= mang[i]; j++) {
+                    if (mang[i] % j == 0) {
+                        dem++;
+                    }
+                }
+                if (dem == 2) {
+                    mang_so_nguyen_to.push(mang[i]);
+                }
+            }
+            document.getElementById('ket_qua').innerHTML = mang + ' cac so nguyen to la:' + mang_so_nguyen_to;
+        }
+    </script>
+</body>
+
+</html>
